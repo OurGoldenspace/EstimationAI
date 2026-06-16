@@ -1,0 +1,2702 @@
+[
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 1046533.0,
+    "Cost_Per_SF": 16.49,
+    "Percentage": 9.83
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 348565.0,
+    "Cost_Per_SF": 5.49,
+    "Percentage": 3.28
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 64499.0,
+    "Cost_Per_SF": 1.02,
+    "Percentage": 0.61
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 207834.0,
+    "Cost_Per_SF": 3.28,
+    "Percentage": 1.95
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 2848989.0,
+    "Cost_Per_SF": 44.9,
+    "Percentage": 26.77
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 863917.0,
+    "Cost_Per_SF": 13.62,
+    "Percentage": 8.12
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 443610.0,
+    "Cost_Per_SF": 6.99,
+    "Percentage": 4.17
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 1291158.0,
+    "Cost_Per_SF": 20.35,
+    "Percentage": 12.13
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 54037.0,
+    "Cost_Per_SF": 0.85,
+    "Percentage": 0.51
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 144412.0,
+    "Cost_Per_SF": 2.28,
+    "Percentage": 1.36
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 33126.0,
+    "Cost_Per_SF": 0.52,
+    "Percentage": 0.31
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 195044.0,
+    "Cost_Per_SF": 3.07,
+    "Percentage": 1.83
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 116859.0,
+    "Cost_Per_SF": 1.84,
+    "Percentage": 1.1
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 578844.0,
+    "Cost_Per_SF": 9.12,
+    "Percentage": 5.44
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 467021.0,
+    "Cost_Per_SF": 7.36,
+    "Percentage": 4.39
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 794820.0,
+    "Cost_Per_SF": 12.53,
+    "Percentage": 7.47
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 740895.0,
+    "Cost_Per_SF": 11.68,
+    "Percentage": 6.96
+  },
+  {
+    "Project": "111 Joyce Ave",
+    "Type": 0,
+    "Area_SF": 63450,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 325596.0,
+    "Cost_Per_SF": 5.13,
+    "Percentage": 3.06
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 752688.0,
+    "Cost_Per_SF": 17.92,
+    "Percentage": 11.26
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 237448.0,
+    "Cost_Per_SF": 5.65,
+    "Percentage": 3.55
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 51776.0,
+    "Cost_Per_SF": 1.23,
+    "Percentage": 0.77
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 164645.0,
+    "Cost_Per_SF": 3.92,
+    "Percentage": 2.46
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 1041966.0,
+    "Cost_Per_SF": 24.81,
+    "Percentage": 15.59
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 504389.0,
+    "Cost_Per_SF": 12.01,
+    "Percentage": 7.55
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 309473.0,
+    "Cost_Per_SF": 7.37,
+    "Percentage": 4.63
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 693844.0,
+    "Cost_Per_SF": 16.52,
+    "Percentage": 10.38
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 33304.0,
+    "Cost_Per_SF": 0.79,
+    "Percentage": 0.5
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 101331.0,
+    "Cost_Per_SF": 2.41,
+    "Percentage": 1.52
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 27393.0,
+    "Cost_Per_SF": 0.65,
+    "Percentage": 0.41
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 137673.0,
+    "Cost_Per_SF": 3.28,
+    "Percentage": 2.06
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 101995.0,
+    "Cost_Per_SF": 2.43,
+    "Percentage": 1.53
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 466377.0,
+    "Cost_Per_SF": 11.1,
+    "Percentage": 6.98
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 590032.0,
+    "Cost_Per_SF": 14.05,
+    "Percentage": 8.83
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 749851.0,
+    "Cost_Per_SF": 17.85,
+    "Percentage": 11.22
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 534298.0,
+    "Cost_Per_SF": 12.72,
+    "Percentage": 8.0
+  },
+  {
+    "Project": "45 Queen Street Office Tower",
+    "Type": 1,
+    "Area_SF": 42000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 220818.0,
+    "Cost_Per_SF": 5.26,
+    "Percentage": 3.3
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 1378832.0,
+    "Cost_Per_SF": 16.22,
+    "Percentage": 10.37
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 525835.0,
+    "Cost_Per_SF": 6.19,
+    "Percentage": 3.96
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 95778.0,
+    "Cost_Per_SF": 1.13,
+    "Percentage": 0.72
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 289704.0,
+    "Cost_Per_SF": 3.41,
+    "Percentage": 2.18
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 3527116.0,
+    "Cost_Per_SF": 41.5,
+    "Percentage": 26.53
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 885224.0,
+    "Cost_Per_SF": 10.41,
+    "Percentage": 6.66
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 455343.0,
+    "Cost_Per_SF": 5.36,
+    "Percentage": 3.43
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 1724712.0,
+    "Cost_Per_SF": 20.29,
+    "Percentage": 12.97
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 60408.0,
+    "Cost_Per_SF": 0.71,
+    "Percentage": 0.45
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 193188.0,
+    "Cost_Per_SF": 2.27,
+    "Percentage": 1.45
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 39785.0,
+    "Cost_Per_SF": 0.47,
+    "Percentage": 0.3
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 227053.0,
+    "Cost_Per_SF": 2.67,
+    "Percentage": 1.71
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 177072.0,
+    "Cost_Per_SF": 2.08,
+    "Percentage": 1.33
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 762668.0,
+    "Cost_Per_SF": 8.97,
+    "Percentage": 5.74
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 536549.0,
+    "Cost_Per_SF": 6.31,
+    "Percentage": 4.04
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 894294.0,
+    "Cost_Per_SF": 10.52,
+    "Percentage": 6.73
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 939620.0,
+    "Cost_Per_SF": 11.05,
+    "Percentage": 7.07
+  },
+  {
+    "Project": "Harbour View Residences",
+    "Type": 0,
+    "Area_SF": 85000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 448012.0,
+    "Cost_Per_SF": 5.27,
+    "Percentage": 3.37
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 446432.0,
+    "Cost_Per_SF": 15.66,
+    "Percentage": 10.76
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 178635.0,
+    "Cost_Per_SF": 6.27,
+    "Percentage": 4.31
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 26529.0,
+    "Cost_Per_SF": 0.93,
+    "Percentage": 0.64
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 103077.0,
+    "Cost_Per_SF": 3.62,
+    "Percentage": 2.49
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 610623.0,
+    "Cost_Per_SF": 21.43,
+    "Percentage": 14.72
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 336488.0,
+    "Cost_Per_SF": 11.81,
+    "Percentage": 8.11
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 193700.0,
+    "Cost_Per_SF": 6.8,
+    "Percentage": 4.67
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 471824.0,
+    "Cost_Per_SF": 16.56,
+    "Percentage": 11.38
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 23948.0,
+    "Cost_Per_SF": 0.84,
+    "Percentage": 0.58
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 75506.0,
+    "Cost_Per_SF": 2.65,
+    "Percentage": 1.82
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 16979.0,
+    "Cost_Per_SF": 0.6,
+    "Percentage": 0.41
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 89725.0,
+    "Cost_Per_SF": 3.15,
+    "Percentage": 2.16
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 53248.0,
+    "Cost_Per_SF": 1.87,
+    "Percentage": 1.28
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 232769.0,
+    "Cost_Per_SF": 8.17,
+    "Percentage": 5.61
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 342189.0,
+    "Cost_Per_SF": 12.01,
+    "Percentage": 8.25
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 379130.0,
+    "Cost_Per_SF": 13.3,
+    "Percentage": 9.14
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 314294.0,
+    "Cost_Per_SF": 11.03,
+    "Percentage": 7.58
+  },
+  {
+    "Project": "Barrington Tower Renovation",
+    "Type": 1,
+    "Area_SF": 28500,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 152866.0,
+    "Cost_Per_SF": 5.36,
+    "Percentage": 3.69
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 298956.0,
+    "Cost_Per_SF": 16.16,
+    "Percentage": 10.71
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 102659.0,
+    "Cost_Per_SF": 5.55,
+    "Percentage": 3.68
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 19359.0,
+    "Cost_Per_SF": 1.05,
+    "Percentage": 0.69
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 58714.0,
+    "Cost_Per_SF": 3.17,
+    "Percentage": 2.1
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 575909.0,
+    "Cost_Per_SF": 31.13,
+    "Percentage": 20.64
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 216688.0,
+    "Cost_Per_SF": 11.71,
+    "Percentage": 7.77
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 158693.0,
+    "Cost_Per_SF": 8.58,
+    "Percentage": 5.69
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 420689.0,
+    "Cost_Per_SF": 22.74,
+    "Percentage": 15.08
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 15070.0,
+    "Cost_Per_SF": 0.81,
+    "Percentage": 0.54
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 41760.0,
+    "Cost_Per_SF": 2.26,
+    "Percentage": 1.5
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 9921.0,
+    "Cost_Per_SF": 0.54,
+    "Percentage": 0.36
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 58290.0,
+    "Cost_Per_SF": 3.15,
+    "Percentage": 2.09
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 35324.0,
+    "Cost_Per_SF": 1.91,
+    "Percentage": 1.27
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 155838.0,
+    "Cost_Per_SF": 8.42,
+    "Percentage": 5.58
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 137354.0,
+    "Cost_Per_SF": 7.42,
+    "Percentage": 4.92
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 228299.0,
+    "Cost_Per_SF": 12.34,
+    "Percentage": 8.18
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 189724.0,
+    "Cost_Per_SF": 10.26,
+    "Percentage": 6.8
+  },
+  {
+    "Project": "Wheeler Blvd Retail Centre",
+    "Type": 2,
+    "Area_SF": 18500,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 73278.0,
+    "Cost_Per_SF": 3.96,
+    "Percentage": 2.63
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 429322.0,
+    "Cost_Per_SF": 12.27,
+    "Percentage": 8.5
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 204297.0,
+    "Cost_Per_SF": 5.84,
+    "Percentage": 4.04
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 36416.0,
+    "Cost_Per_SF": 1.04,
+    "Percentage": 0.72
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 107157.0,
+    "Cost_Per_SF": 3.06,
+    "Percentage": 2.12
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 805794.0,
+    "Cost_Per_SF": 23.02,
+    "Percentage": 15.95
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 383048.0,
+    "Cost_Per_SF": 10.94,
+    "Percentage": 7.58
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 355068.0,
+    "Cost_Per_SF": 10.14,
+    "Percentage": 7.03
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 831380.0,
+    "Cost_Per_SF": 23.75,
+    "Percentage": 16.46
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 30571.0,
+    "Cost_Per_SF": 0.87,
+    "Percentage": 0.61
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 90197.0,
+    "Cost_Per_SF": 2.58,
+    "Percentage": 1.79
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 14947.0,
+    "Cost_Per_SF": 0.43,
+    "Percentage": 0.3
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 100508.0,
+    "Cost_Per_SF": 2.87,
+    "Percentage": 1.99
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 69529.0,
+    "Cost_Per_SF": 1.99,
+    "Percentage": 1.38
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 311454.0,
+    "Cost_Per_SF": 8.9,
+    "Percentage": 6.17
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 201214.0,
+    "Cost_Per_SF": 5.75,
+    "Percentage": 3.98
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 429517.0,
+    "Cost_Per_SF": 12.27,
+    "Percentage": 8.5
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 345864.0,
+    "Cost_Per_SF": 9.88,
+    "Percentage": 6.85
+  },
+  {
+    "Project": "Champlain Place Expansion",
+    "Type": 2,
+    "Area_SF": 35000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 150500.0,
+    "Cost_Per_SF": 4.3,
+    "Percentage": 2.98
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 779267.0,
+    "Cost_Per_SF": 14.99,
+    "Percentage": 9.31
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 363315.0,
+    "Cost_Per_SF": 6.99,
+    "Percentage": 4.34
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 60548.0,
+    "Cost_Per_SF": 1.16,
+    "Percentage": 0.72
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 165649.0,
+    "Cost_Per_SF": 3.19,
+    "Percentage": 1.98
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 2093159.0,
+    "Cost_Per_SF": 40.25,
+    "Percentage": 25.0
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 583196.0,
+    "Cost_Per_SF": 11.22,
+    "Percentage": 6.97
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 350897.0,
+    "Cost_Per_SF": 6.75,
+    "Percentage": 4.19
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 1288281.0,
+    "Cost_Per_SF": 24.77,
+    "Percentage": 15.39
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 40898.0,
+    "Cost_Per_SF": 0.79,
+    "Percentage": 0.49
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 137778.0,
+    "Cost_Per_SF": 2.65,
+    "Percentage": 1.65
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 29392.0,
+    "Cost_Per_SF": 0.57,
+    "Percentage": 0.35
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 137238.0,
+    "Cost_Per_SF": 2.64,
+    "Percentage": 1.64
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 115589.0,
+    "Cost_Per_SF": 2.22,
+    "Percentage": 1.38
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 506509.0,
+    "Cost_Per_SF": 9.74,
+    "Percentage": 6.05
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 380977.0,
+    "Cost_Per_SF": 7.33,
+    "Percentage": 4.55
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 622573.0,
+    "Cost_Per_SF": 11.97,
+    "Percentage": 7.44
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 540886.0,
+    "Cost_Per_SF": 10.4,
+    "Percentage": 6.46
+  },
+  {
+    "Project": "University Ave Student Housing",
+    "Type": 0,
+    "Area_SF": 52000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 236301.0,
+    "Cost_Per_SF": 4.54,
+    "Percentage": 2.82
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 251475.0,
+    "Cost_Per_SF": 16.76,
+    "Percentage": 7.8
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 134209.0,
+    "Cost_Per_SF": 8.95,
+    "Percentage": 4.16
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 22531.0,
+    "Cost_Per_SF": 1.5,
+    "Percentage": 0.7
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 72896.0,
+    "Cost_Per_SF": 4.86,
+    "Percentage": 2.26
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 733223.0,
+    "Cost_Per_SF": 48.88,
+    "Percentage": 22.74
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 208157.0,
+    "Cost_Per_SF": 13.88,
+    "Percentage": 6.45
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 129267.0,
+    "Cost_Per_SF": 8.62,
+    "Percentage": 4.01
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 423599.0,
+    "Cost_Per_SF": 28.24,
+    "Percentage": 13.13
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 14174.0,
+    "Cost_Per_SF": 0.94,
+    "Percentage": 0.44
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 48973.0,
+    "Cost_Per_SF": 3.26,
+    "Percentage": 1.52
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 9215.0,
+    "Cost_Per_SF": 0.61,
+    "Percentage": 0.29
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 61414.0,
+    "Cost_Per_SF": 4.09,
+    "Percentage": 1.9
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 43019.0,
+    "Cost_Per_SF": 2.87,
+    "Percentage": 1.33
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 221250.0,
+    "Cost_Per_SF": 14.75,
+    "Percentage": 6.86
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 185373.0,
+    "Cost_Per_SF": 12.36,
+    "Percentage": 5.75
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 284323.0,
+    "Cost_Per_SF": 18.95,
+    "Percentage": 8.82
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 219887.0,
+    "Cost_Per_SF": 14.66,
+    "Percentage": 6.82
+  },
+  {
+    "Project": "Prospect Street Medical Clinic",
+    "Type": 3,
+    "Area_SF": 15000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 103120.0,
+    "Cost_Per_SF": 6.87,
+    "Percentage": 3.2
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 336205.0,
+    "Cost_Per_SF": 7.47,
+    "Percentage": 9.77
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 127220.0,
+    "Cost_Per_SF": 2.83,
+    "Percentage": 3.7
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 23975.0,
+    "Cost_Per_SF": 0.53,
+    "Percentage": 0.7
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 584554.0,
+    "Cost_Per_SF": 12.99,
+    "Percentage": 16.98
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 331872.0,
+    "Cost_Per_SF": 7.37,
+    "Percentage": 9.64
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 265196.0,
+    "Cost_Per_SF": 5.89,
+    "Percentage": 7.7
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 156178.0,
+    "Cost_Per_SF": 3.47,
+    "Percentage": 4.54
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 228568.0,
+    "Cost_Per_SF": 5.08,
+    "Percentage": 6.64
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 18605.0,
+    "Cost_Per_SF": 0.41,
+    "Percentage": 0.54
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 57904.0,
+    "Cost_Per_SF": 1.29,
+    "Percentage": 1.68
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 10986.0,
+    "Cost_Per_SF": 0.24,
+    "Percentage": 0.32
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 61204.0,
+    "Cost_Per_SF": 1.36,
+    "Percentage": 1.78
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 44397.0,
+    "Cost_Per_SF": 0.99,
+    "Percentage": 1.29
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 223780.0,
+    "Cost_Per_SF": 4.97,
+    "Percentage": 6.5
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 140717.0,
+    "Cost_Per_SF": 3.13,
+    "Percentage": 4.09
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 246126.0,
+    "Cost_Per_SF": 5.47,
+    "Percentage": 7.15
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 381164.0,
+    "Cost_Per_SF": 8.47,
+    "Percentage": 11.07
+  },
+  {
+    "Project": "Mapleton Road Warehouse",
+    "Type": 4,
+    "Area_SF": 45000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 112910.0,
+    "Cost_Per_SF": 2.51,
+    "Percentage": 3.28
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 1035804.0,
+    "Cost_Per_SF": 14.39,
+    "Percentage": 8.78
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 511742.0,
+    "Cost_Per_SF": 7.11,
+    "Percentage": 4.34
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 86010.0,
+    "Cost_Per_SF": 1.19,
+    "Percentage": 0.73
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 221649.0,
+    "Cost_Per_SF": 3.08,
+    "Percentage": 1.88
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 2421093.0,
+    "Cost_Per_SF": 33.63,
+    "Percentage": 20.51
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 967543.0,
+    "Cost_Per_SF": 13.44,
+    "Percentage": 8.2
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 407309.0,
+    "Cost_Per_SF": 5.66,
+    "Percentage": 3.45
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 1487676.0,
+    "Cost_Per_SF": 20.66,
+    "Percentage": 12.61
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 70222.0,
+    "Cost_Per_SF": 0.98,
+    "Percentage": 0.6
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 192733.0,
+    "Cost_Per_SF": 2.68,
+    "Percentage": 1.63
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 40276.0,
+    "Cost_Per_SF": 0.56,
+    "Percentage": 0.34
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 237233.0,
+    "Cost_Per_SF": 3.29,
+    "Percentage": 2.01
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 166983.0,
+    "Cost_Per_SF": 2.32,
+    "Percentage": 1.41
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 758410.0,
+    "Cost_Per_SF": 10.53,
+    "Percentage": 6.43
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 440978.0,
+    "Cost_Per_SF": 6.12,
+    "Percentage": 3.74
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 935734.0,
+    "Cost_Per_SF": 13.0,
+    "Percentage": 7.93
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 886913.0,
+    "Cost_Per_SF": 12.32,
+    "Percentage": 7.52
+  },
+  {
+    "Project": "Portland Street Mixed Use",
+    "Type": 5,
+    "Area_SF": 72000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 352402.0,
+    "Cost_Per_SF": 4.89,
+    "Percentage": 2.99
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 598687.0,
+    "Cost_Per_SF": 15.75,
+    "Percentage": 10.09
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 238477.0,
+    "Cost_Per_SF": 6.28,
+    "Percentage": 4.02
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 44175.0,
+    "Cost_Per_SF": 1.16,
+    "Percentage": 0.74
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 111171.0,
+    "Cost_Per_SF": 2.93,
+    "Percentage": 1.87
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 1440212.0,
+    "Cost_Per_SF": 37.9,
+    "Percentage": 24.27
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 435470.0,
+    "Cost_Per_SF": 11.46,
+    "Percentage": 7.34
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 245362.0,
+    "Cost_Per_SF": 6.46,
+    "Percentage": 4.13
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 759915.0,
+    "Cost_Per_SF": 20.0,
+    "Percentage": 12.8
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 27990.0,
+    "Cost_Per_SF": 0.74,
+    "Percentage": 0.47
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 92315.0,
+    "Cost_Per_SF": 2.43,
+    "Percentage": 1.56
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 19703.0,
+    "Cost_Per_SF": 0.52,
+    "Percentage": 0.33
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 101381.0,
+    "Cost_Per_SF": 2.67,
+    "Percentage": 1.71
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 70257.0,
+    "Cost_Per_SF": 1.85,
+    "Percentage": 1.18
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 399926.0,
+    "Cost_Per_SF": 10.52,
+    "Percentage": 6.74
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 244985.0,
+    "Cost_Per_SF": 6.45,
+    "Percentage": 4.13
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 484762.0,
+    "Cost_Per_SF": 12.76,
+    "Percentage": 8.17
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 457809.0,
+    "Cost_Per_SF": 12.05,
+    "Percentage": 7.71
+  },
+  {
+    "Project": "King Ave Senior Living",
+    "Type": 0,
+    "Area_SF": 38000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 152997.0,
+    "Cost_Per_SF": 4.03,
+    "Percentage": 2.58
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 396404.0,
+    "Cost_Per_SF": 18.02,
+    "Percentage": 10.48
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 153576.0,
+    "Cost_Per_SF": 6.98,
+    "Percentage": 4.06
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 27079.0,
+    "Cost_Per_SF": 1.23,
+    "Percentage": 0.72
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 87741.0,
+    "Cost_Per_SF": 3.99,
+    "Percentage": 2.32
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 1008551.0,
+    "Cost_Per_SF": 45.84,
+    "Percentage": 26.65
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 253393.0,
+    "Cost_Per_SF": 11.52,
+    "Percentage": 6.7
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 135639.0,
+    "Cost_Per_SF": 6.17,
+    "Percentage": 3.58
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 400623.0,
+    "Cost_Per_SF": 18.21,
+    "Percentage": 10.59
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 18427.0,
+    "Cost_Per_SF": 0.84,
+    "Percentage": 0.49
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 50064.0,
+    "Cost_Per_SF": 2.28,
+    "Percentage": 1.32
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 11966.0,
+    "Cost_Per_SF": 0.54,
+    "Percentage": 0.32
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 76565.0,
+    "Cost_Per_SF": 3.48,
+    "Percentage": 2.02
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 43455.0,
+    "Cost_Per_SF": 1.98,
+    "Percentage": 1.15
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 317072.0,
+    "Cost_Per_SF": 14.41,
+    "Percentage": 8.38
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 216172.0,
+    "Cost_Per_SF": 9.83,
+    "Percentage": 5.71
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 321102.0,
+    "Cost_Per_SF": 14.6,
+    "Percentage": 8.49
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 315644.0,
+    "Cost_Per_SF": 14.35,
+    "Percentage": 8.34
+  },
+  {
+    "Project": "Coverdale Road School Addition",
+    "Type": 3,
+    "Area_SF": 22000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 125010.0,
+    "Cost_Per_SF": 5.68,
+    "Percentage": 3.3
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 849812.0,
+    "Cost_Per_SF": 15.45,
+    "Percentage": 9.6
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 360389.0,
+    "Cost_Per_SF": 6.55,
+    "Percentage": 4.07
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 51592.0,
+    "Cost_Per_SF": 0.94,
+    "Percentage": 0.58
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 177091.0,
+    "Cost_Per_SF": 3.22,
+    "Percentage": 2.0
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 2524779.0,
+    "Cost_Per_SF": 45.91,
+    "Percentage": 28.51
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 698868.0,
+    "Cost_Per_SF": 12.71,
+    "Percentage": 7.89
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 334439.0,
+    "Cost_Per_SF": 6.08,
+    "Percentage": 3.78
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 1317522.0,
+    "Cost_Per_SF": 23.95,
+    "Percentage": 14.88
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 39925.0,
+    "Cost_Per_SF": 0.73,
+    "Percentage": 0.45
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 143428.0,
+    "Cost_Per_SF": 2.61,
+    "Percentage": 1.62
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 30130.0,
+    "Cost_Per_SF": 0.55,
+    "Percentage": 0.34
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 179176.0,
+    "Cost_Per_SF": 3.26,
+    "Percentage": 2.02
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 101685.0,
+    "Cost_Per_SF": 1.85,
+    "Percentage": 1.15
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 602667.0,
+    "Cost_Per_SF": 10.96,
+    "Percentage": 6.81
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 325029.0,
+    "Cost_Per_SF": 5.91,
+    "Percentage": 3.67
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 591044.0,
+    "Cost_Per_SF": 10.75,
+    "Percentage": 6.67
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 692098.0,
+    "Cost_Per_SF": 12.58,
+    "Percentage": 7.82
+  },
+  {
+    "Project": "Mountain Road Condo Phase 2",
+    "Type": 0,
+    "Area_SF": 55000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 277722.0,
+    "Cost_Per_SF": 5.05,
+    "Percentage": 3.14
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 375470.0,
+    "Cost_Per_SF": 6.26,
+    "Percentage": 9.2
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 146228.0,
+    "Cost_Per_SF": 2.44,
+    "Percentage": 3.58
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 31373.0,
+    "Cost_Per_SF": 0.52,
+    "Percentage": 0.77
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 598756.0,
+    "Cost_Per_SF": 9.98,
+    "Percentage": 14.68
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 444318.0,
+    "Cost_Per_SF": 7.41,
+    "Percentage": 10.89
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 345054.0,
+    "Cost_Per_SF": 5.75,
+    "Percentage": 8.46
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 157255.0,
+    "Cost_Per_SF": 2.62,
+    "Percentage": 3.85
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 265747.0,
+    "Cost_Per_SF": 4.43,
+    "Percentage": 6.51
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 22621.0,
+    "Cost_Per_SF": 0.38,
+    "Percentage": 0.55
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 77169.0,
+    "Cost_Per_SF": 1.29,
+    "Percentage": 1.89
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 13387.0,
+    "Cost_Per_SF": 0.22,
+    "Percentage": 0.33
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 84196.0,
+    "Cost_Per_SF": 1.4,
+    "Percentage": 2.06
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 50969.0,
+    "Cost_Per_SF": 0.85,
+    "Percentage": 1.25
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 250298.0,
+    "Cost_Per_SF": 4.17,
+    "Percentage": 6.13
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 190815.0,
+    "Cost_Per_SF": 3.18,
+    "Percentage": 4.68
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 299326.0,
+    "Cost_Per_SF": 4.99,
+    "Percentage": 7.34
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 489887.0,
+    "Cost_Per_SF": 8.16,
+    "Percentage": 12.01
+  },
+  {
+    "Project": "Bible Hill Industrial Park Unit 7",
+    "Type": 4,
+    "Area_SF": 60000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 138484.0,
+    "Cost_Per_SF": 2.31,
+    "Percentage": 3.39
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 1,
+    "Division_Name": "General Requirements",
+    "Total_Cost": 132620.0,
+    "Cost_Per_SF": 11.05,
+    "Percentage": 8.99
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 3,
+    "Division_Name": "Concrete",
+    "Total_Cost": 60790.0,
+    "Cost_Per_SF": 5.07,
+    "Percentage": 4.12
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 4,
+    "Division_Name": "Masonry",
+    "Total_Cost": 12041.0,
+    "Cost_Per_SF": 1.0,
+    "Percentage": 0.82
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 5,
+    "Division_Name": "Metals",
+    "Total_Cost": 39434.0,
+    "Cost_Per_SF": 3.29,
+    "Percentage": 2.67
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 6,
+    "Division_Name": "Wood Plastics Composites",
+    "Total_Cost": 210783.0,
+    "Cost_Per_SF": 17.57,
+    "Percentage": 14.28
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 7,
+    "Division_Name": "Thermal Moisture Protection",
+    "Total_Cost": 113557.0,
+    "Cost_Per_SF": 9.46,
+    "Percentage": 7.69
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 8,
+    "Division_Name": "Openings",
+    "Total_Cost": 55876.0,
+    "Cost_Per_SF": 4.66,
+    "Percentage": 3.79
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 9,
+    "Division_Name": "Finishes",
+    "Total_Cost": 182099.0,
+    "Cost_Per_SF": 15.17,
+    "Percentage": 12.34
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 10,
+    "Division_Name": "Specialties",
+    "Total_Cost": 9337.0,
+    "Cost_Per_SF": 0.78,
+    "Percentage": 0.63
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 11,
+    "Division_Name": "Equipment",
+    "Total_Cost": 28359.0,
+    "Cost_Per_SF": 2.36,
+    "Percentage": 1.92
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 12,
+    "Division_Name": "Furnishings",
+    "Total_Cost": 5265.0,
+    "Cost_Per_SF": 0.44,
+    "Percentage": 0.36
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 14,
+    "Division_Name": "Conveying Equipment",
+    "Total_Cost": 26463.0,
+    "Cost_Per_SF": 2.21,
+    "Percentage": 1.79
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 21,
+    "Division_Name": "Fire Suppression",
+    "Total_Cost": 22693.0,
+    "Cost_Per_SF": 1.89,
+    "Percentage": 1.54
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 22,
+    "Division_Name": "Plumbing",
+    "Total_Cost": 102254.0,
+    "Cost_Per_SF": 8.52,
+    "Percentage": 6.93
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 23,
+    "Division_Name": "HVAC",
+    "Total_Cost": 133242.0,
+    "Cost_Per_SF": 11.1,
+    "Percentage": 9.03
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 26,
+    "Division_Name": "Electrical",
+    "Total_Cost": 166238.0,
+    "Cost_Per_SF": 13.85,
+    "Percentage": 11.26
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 31,
+    "Division_Name": "Earthwork",
+    "Total_Cost": 128134.0,
+    "Cost_Per_SF": 10.68,
+    "Percentage": 8.68
+  },
+  {
+    "Project": "Rothesay Ave Office Fit-Out",
+    "Type": 1,
+    "Area_SF": 12000,
+    "Division": 32,
+    "Division_Name": "Exterior Improvements",
+    "Total_Cost": 40933.0,
+    "Cost_Per_SF": 3.41,
+    "Percentage": 2.77
+  }
+]

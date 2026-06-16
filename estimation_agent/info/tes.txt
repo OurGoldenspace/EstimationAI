@@ -1,0 +1,38 @@
+fetch('https://openrouter.ai/api/v1/chat/completions', {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer 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',
+    'HTTP-Referer': '<YOUR_SITE_URL>',
+    'X-Title': '<YOUR_SITE_NAME>',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    model: 'openai/gpt-4o',
+    messages: [
+      {
+        role: 'user',
+        content: 'What is the meaning of life?',
+      },
+    ],
+  }),
+});
+
+
+
+
+
+
+restAPi =
+
+curl https://openrouter.ai/api/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer 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" \
+  -d '{
+  "model": "openai/gpt-4o",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the meaning of life?"
+    }
+  ]
+}'

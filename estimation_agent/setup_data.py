@@ -1,31 +1,23 @@
 """
-setup_data.py
-=============
-Extracts real AGCM project data from Excel estimate workbooks and outputs:
-  - estimation_agent/data/projects.json   → project-level records (from DATA sheet)
-  - estimation_agent/data/divisions.json  → CSI division $/SF per project (from Estimate Summary sheet)
+setup_data.py  (v2)
+===================
+SOURCE 1 — Dashboard (454+ projects) → projects.json
+SOURCE 2 — Individual workbooks      → divisions.json
 
-Usage:
-  python setup_data.py
-
-Place all Excel workbooks in the same folder as this script (or update EXCEL_DIR below).
-Run once whenever new project files are added.
+Run from: estimation_agent/ folder (where all Excel files live)
+Output:   data/projects.json
+          data/divisions.json
 """
 
-import os
-import json
-import re
-import openpyxl
+import os, json, re
 from datetime import datetime
+import openpyxl
+from collections import Counter
 
-# ─── CONFIG ────────────────────────────────────────────────────────────────────
-# Folder containing all the Excel estimate workbooks
-EXCEL_DIR = "."
+EXCEL_DIR          = "."
+OUTPUT_DIR         = "data"
+DASHBOARD_FILENAME = "2026_Estimate_Summary_Dashboard_-_AI_Agent.xlsx"
 
-# Output folder (will be created if it doesn't exist)
-OUTPUT_DIR = os.path.join("estimation_agent", "data")
-
-# CSI division codes we care about (rows in Estimate Summary)
 DIVISION_CODES = {
     "01 00 00": "General Requirements",
     "02 00 00": "Existing Conditions",
@@ -53,297 +45,351 @@ DIVISION_CODES = {
     "33 00 00": "Utilities",
 }
 
-# Normalize division code key (strip trailing spaces)
+# ─── HELPERS ───────────────────────────────────────────────────────────────────
+
+def clean(v):
+    if v is None: return None
+    if isinstance(v, str):
+        s = v.strip()
+        return s if s else None
+    return v
+
+def flt(v):
+    try: return float(v) if v is not None else None
+    except: return None
+
 def normalize_code(raw):
-    if raw is None:
-        return None
-    return re.sub(r'\s+', ' ', str(raw).strip())
+    if raw is None: return None
+    return re.sub(r'\s+', ' ', str(raw).strip().rstrip())
 
+def infer_type(name, raw_type):
+    """Map raw type or name keywords to canonical project type."""
+    if raw_type is not None:
+        rt = str(raw_type).strip()
+        mapping = {
+            "Multi Residential": "Multi-Residential",
+            "multi residential": "Multi-Residential",
+            "Office":            "Office",
+            "Retail":            "Retail",
+            "Food":              "Grocery / Food Retail",
+            "0":                 "Multi-Residential",
+            "1":                 "Office",
+            "2":                 "Retail",
+            "3":                 "Institutional",
+            "4":                 "Industrial",
+            "5":                 "Mixed Use",
+        }
+        if rt in mapping:
+            return mapping[rt]
 
-# ─── EXTRACT DATA SHEET ────────────────────────────────────────────────────────
-def extract_data_sheet(ws):
-    """
-    Reads the DATA sheet and returns a project dict.
-    The actual data row is always the row after the header row
-    (which starts with 'Closing Date').
-    """
-    header = None
-    for row in ws.iter_rows(values_only=True):
-        if row[0] is not None and str(row[0]).strip() == "Closing Date":
-            header = [str(c).strip() if c else "" for c in row]
-            continue
-        if header and any(c is not None for c in row):
-            # This is the data row
-            record = dict(zip(header, row))
-            return record
+    if not name:
+        return "Commercial / Other"
+    n = name.lower()
+
+    if any(k in n for k in ["apartment","condo","residential","multi","ymca","daycare","school"]):
+        return "Multi-Residential"
+    if any(k in n for k in ["dental","medical","clinic","wellness","health","pharmacy","chiro"]):
+        return "Medical / Dental"
+    if any(k in n for k in ["sobeys","foodland","grocery","cannabis","anbl","dollarama","walmart","wal-mart"]):
+        return "Grocery / Food Retail"
+    if any(k in n for k in ["ford","honda","auto","dealership","toyota","nissan"]):
+        return "Automotive"
+    if any(k in n for k in ["reno","renovation","expansion","fit-up","tenant","facade","façade","exterior","upgrade"]):
+        return "Renovation / Tenant Fit-up"
+    if any(k in n for k in ["office","professional","stantec","bioscript"]):
+        return "Office"
+    if any(k in n for k in ["retail","store","shop","mall","bank","scotia"]):
+        return "Retail"
+    if any(k in n for k in ["warehouse","industrial","air liquide","manufacturing"]):
+        return "Industrial"
+    return "Commercial / Other"
+
+def price_cat(val, price=None):
+    if val:
+        c = str(val).strip().upper()
+        if c in ["A","B","C","D","E"]:
+            return c
+    if price:
+        try:
+            p = float(price)
+            if p >= 5_000_000: return "A"
+            if p >= 2_000_000: return "B"
+            if p >= 500_000:   return "C"
+            if p >= 100_000:   return "D"
+            return "E"
+        except: pass
+    return None
+
+def find_header_row(rows, marker="Closing Date"):
+    """Find the row index where the header row starts."""
+    for i, row in enumerate(rows):
+        if any(v is not None and marker in str(v) for v in row):
+            return i
     return None
 
 
-# ─── EXTRACT ESTIMATE SUMMARY SHEET ───────────────────────────────────────────
-def extract_estimate_summary(ws):
-    """
-    Reads the Estimate Summary sheet and returns:
-      - project metadata (estimate number, name, area, province, city, etc.)
-      - divisions: dict of {code: {total, cost_per_sf, me, labour, subcontract}}
-      - totals: construction cost, OH&P, estimate price
-    """
-    meta = {}
-    divisions = {}
-    totals = {}
+# ══════════════════════════════════════════════════════════════════════════════
+# SOURCE 1 — Dashboard → projects.json
+# ══════════════════════════════════════════════════════════════════════════════
 
+def read_dashboard(path):
+    print(f"\n📊 Reading dashboard: {os.path.basename(path)}")
+    try:
+        wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
+    except Exception as e:
+        print(f"  ✗ Could not open: {e}")
+        return []
+
+    if "DATA" not in wb.sheetnames:
+        print("  ✗ No DATA sheet found.")
+        return []
+
+    ws   = wb["DATA"]
     rows = list(ws.iter_rows(values_only=True))
 
-    for row in rows:
-        # ── Header metadata rows ──────────────────────────────────────────
-        if row[0] == "Closing Date :":
-            val = row[1]
-            if isinstance(val, datetime):
-                meta["closing_date"] = val.strftime("%Y-%m-%d")
-            else:
-                meta["closing_date"] = str(val) if val else None
+    hdr_idx = find_header_row(rows)
+    if hdr_idx is None:
+        print("  ✗ Could not find header row.")
+        return []
 
-        elif row[0] == "Estimate # E-":
-            meta["estimate_number"] = row[1]
-            meta["area_sf"] = row[3]
+    hdr = rows[hdr_idx]
+    col = {str(h).strip(): i for i, h in enumerate(hdr) if h}
 
-        elif row[0] == "Province :":
-            meta["province"] = row[1]
-            meta["estimate_name"] = row[3]
+    projects, skipped = [], 0
+    for row in rows[hdr_idx + 1:]:
+        if not any(v is not None for v in row):
+            continue
 
-        elif row[0] == "City/Town :":
-            meta["city"] = row[1]
-            meta["client"] = row[3]
+        name = clean(row[col.get("Estimate Name", 6)])
+        if not name:
+            skipped += 1
+            continue
 
-        elif row[0] == "Budget Year :":
-            meta["budget_year"] = row[1]
-            meta["contract_type"] = row[3]
+        status = clean(row[col.get("Status", 17)])
+        if status and status.lower() == "pending":
+            skipped += 1
+            continue
 
-        elif row[0] == "Quarter:":
-            meta["quarter"] = row[1]
-            meta["payment_method"] = row[3]
+        raw_type  = clean(row[col.get("Type of Construction", 7)])
+        price_raw = row[col.get("Estimate Price", 11)]
+        area_raw  = row[col.get("Area", 8)]
+        margin_raw= row[col.get("Margin", 16)]
+        sched_raw = row[col.get("Schedule", 13)]
+        sc_raw    = row[col.get("Soft Cost", 14)]
+        cpw_raw   = row[col.get("Cost per Week", 15)]
+        cd_raw    = row[col.get("Closing Date", 0)]
 
-        # ── Division data rows ────────────────────────────────────────────
-        # Col 0 = CODE, Col 1 = Description, Col 2 = %, Col 3 = M&E,
-        # Col 4 = M-HRS, Col 5 = LAB, Col 6 = SUB CONT, Col 7 = Total, Col 8 = $/SF string
-        code_raw = row[0]
-        if code_raw is not None:
-            code = normalize_code(str(code_raw))
-            # Match division codes like "01 00 00", "06 00 00", etc.
-            if re.match(r'^\d{2} 00 00$', code):
-                total = row[7] if row[7] is not None else 0
-                me    = row[3] if row[3] is not None else 0
-                labour = row[5] if row[5] is not None else 0
-                subcon = row[6] if row[6] is not None else 0
+        # Try both "Estimate Number" and "Estimate Number2"
+        est_num_raw = row[col.get("Estimate Number2", col.get("Estimate Number", 5))]
 
-                # Parse $/SF from string like "39.3$/SF" or numeric
-                cost_per_sf = 0
-                sf_raw = row[8]
-                if sf_raw is not None:
-                    sf_str = str(sf_raw).replace("$/SF", "").strip()
-                    try:
-                        cost_per_sf = float(sf_str)
-                    except ValueError:
-                        cost_per_sf = 0
+        price   = flt(price_raw)
+        area_sf = flt(area_raw)
+        margin  = flt(margin_raw)
+        sc      = flt(sc_raw)
+        cpw     = flt(cpw_raw)
 
-                divisions[code] = {
-                    "description": DIVISION_CODES.get(code, str(row[1]).strip() if row[1] else ""),
-                    "total": round(float(total), 2),
-                    "cost_per_sf": round(float(cost_per_sf), 2),
-                    "me": round(float(me), 2),
-                    "labour": round(float(labour), 2),
-                    "subcontract": round(float(subcon), 2),
-                }
+        try: sched = int(float(sched_raw)) if sched_raw else None
+        except: sched = None
 
-        # ── Totals row ────────────────────────────────────────────────────
-        if row[1] is not None and "Sub Totals" in str(row[1]):
-            totals["construction_cost"] = round(float(row[7] or 0), 2)
-            # Parse $/SF from col 8
-            sf_raw = row[8]
-            if sf_raw:
-                sf_str = str(sf_raw).replace("$/SF", "").strip()
-                try:
-                    totals["cost_per_sf_total"] = float(sf_str)
-                except ValueError:
-                    totals["cost_per_sf_total"] = 0
+        cpf    = round(price / area_sf, 2) if price and area_sf and area_sf > 0 else None
+        cd_str = cd_raw.strftime("%Y-%m-%d") if isinstance(cd_raw, datetime) else None
 
-        if row[1] is not None and "OH&P" in str(row[1]):
-            totals["ohp"] = round(float(row[3] or 0), 2)
-            totals["ohp_pct"] = round(float(row[4] or 0), 4)
+        try: budget_year = int(row[col.get("Budget Year", 1)]) if row[col.get("Budget Year", 1)] else None
+        except: budget_year = None
 
-    return meta, divisions, totals
+        projects.append({
+            "source":          "dashboard",
+            "estimate_number": str(clean(est_num_raw)) if est_num_raw else None,
+            "estimate_name":   name,
+            "project_type":    infer_type(name, raw_type),
+            "raw_type":        raw_type,
+            "area_sf":         area_sf,
+            "province":        clean(row[col.get("Province", 3)]),
+            "city":            clean(row[col.get("City/Town", 4)]),
+            "budget_year":     budget_year,
+            "quarter":         clean(row[col.get("Quarter", 2)]),
+            "closing_date":    cd_str,
+            "contract_type":   clean(row[col.get("Contract Type", 9)]),
+            "payment_method":  clean(row[col.get("Payment Method", 10)]),
+            "estimate_price":  round(price, 2) if price else None,
+            "price_category":  price_cat(clean(row[col.get("Price Category", 12)]), price),
+            "cost_per_sf":     cpf,
+            "schedule_weeks":  sched,
+            "soft_cost":       round(sc, 2) if sc else None,
+            "cost_per_week":   round(cpw, 2) if cpw else None,
+            "margin":          round(margin, 4) if margin else None,
+            "margin_pct":      round(margin * 100, 2) if margin else None,
+            "status":          status,
+            "result":          clean(row[col.get("Successful / Unsucessful", 19)]),
+        })
 
-
-# ─── INFER PROJECT TYPE ────────────────────────────────────────────────────────
-def infer_project_type(name, type_code):
-    """
-    type_code in DATA sheet is stored as 0 (unknown/blank).
-    Infer from project name keywords.
-    """
-    if type_code and type_code != 0:
-        return str(type_code)
-
-    name_lower = name.lower() if name else ""
-    if any(k in name_lower for k in ["multi-res", "apartment", "residential", "condo", "ymca", "daycare"]):
-        return "Multi-Residential / Institutional"
-    if any(k in name_lower for k in ["dental", "medical", "clinic", "wellness", "health"]):
-        return "Medical / Dental"
-    if any(k in name_lower for k in ["office", "stantec", "title", "bioscript"]):
-        return "Office"
-    if any(k in name_lower for k in ["sobeys", "foodland", "grocery", "supermarket"]):
-        return "Grocery / Food Retail"
-    if any(k in name_lower for k in ["ford", "honda", "auto", "car", "dealership"]):
-        return "Automotive"
-    if any(k in name_lower for k in ["reno", "renovation", "expansion", "fit-up", "fit up", "tenant"]):
-        return "Renovation / Tenant Fit-up"
-    if any(k in name_lower for k in ["retail", "store", "shop", "mall"]):
-        return "Retail"
-    return "Commercial / Other"
+    print(f"  ✓ {len(projects)} projects  ({skipped} skipped)")
+    return projects
 
 
-# ─── MAIN ──────────────────────────────────────────────────────────────────────
-def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+# ══════════════════════════════════════════════════════════════════════════════
+# SOURCE 2 — Individual workbooks → divisions.json
+# ══════════════════════════════════════════════════════════════════════════════
 
-    all_projects = []
-    all_divisions = []
+def read_workbooks(excel_dir, dashboard_name):
+    print(f"\n📁 Reading individual workbooks...")
+    all_divs, processed = [], 0
 
-    xlsx_files = [
-        f for f in os.listdir(EXCEL_DIR)
-        if f.endswith(".xlsx") and not f.startswith("~")
+    files = [
+        f for f in os.listdir(excel_dir)
+        if f.endswith(".xlsx")
+        and not f.startswith("~")
+        and f != dashboard_name
+        and "Summary_Dashboard" not in f
     ]
+    print(f"  Found {len(files)} workbooks")
 
-    print(f"Found {len(xlsx_files)} Excel files in '{EXCEL_DIR}'\n")
-
-    for fname in sorted(xlsx_files):
-        fpath = os.path.join(EXCEL_DIR, fname)
-        print(f"Processing: {fname}")
-
+    for fname in sorted(files):
+        fpath = os.path.join(excel_dir, fname)
         try:
             wb = openpyxl.load_workbook(fpath, read_only=True, data_only=True)
         except Exception as e:
-            print(f"  ✗ Could not open: {e}\n")
+            print(f"  ✗ {fname}: {e}")
             continue
 
-        sheet_names = wb.sheetnames
-
-        # ── DATA sheet ──────────────────────────────────────────────────
-        if "DATA" not in sheet_names:
-            print(f"  ✗ No DATA sheet found, skipping.\n")
+        if "Estimate Summary" not in wb.sheetnames or "DATA" not in wb.sheetnames:
+            print(f"  ✗ {fname}: missing required sheets")
             continue
 
-        raw = extract_data_sheet(wb["DATA"])
-        if not raw:
-            print(f"  ✗ DATA sheet empty or unrecognized format.\n")
+        # ── Read metadata from DATA sheet using header row ────────────────────
+        est_num = est_name = province = city = raw_type = None
+        area_sf = budget_year = price = None
+
+        data_rows = list(wb["DATA"].iter_rows(values_only=True))
+        hdr_idx = find_header_row(data_rows)
+
+        if hdr_idx is not None and hdr_idx + 1 < len(data_rows):
+            hdr = data_rows[hdr_idx]
+            col = {str(h).strip(): i for i, h in enumerate(hdr) if h}
+            row = data_rows[hdr_idx + 1]  # first data row after header
+            try:
+                # Handle both "Estimate Number" and "Estimate Number2"
+                en_idx   = col.get("Estimate Number", col.get("Estimate Number2", 5))
+                est_num  = str(row[en_idx]).strip() if row[en_idx] else None
+                est_name = str(row[col.get("Estimate Name", 6)]).strip() if row[col.get("Estimate Name", 6)] else None
+                raw_type = row[col.get("Type of Construction", 7)]
+                area_sf  = float(row[col.get("Area", 8)]) if row[col.get("Area", 8)] else None
+                province = str(row[col.get("Province", 3)]).strip() if row[col.get("Province", 3)] else None
+                city     = str(row[col.get("City/Town", 4)]).strip() if row[col.get("City/Town", 4)] else None
+                budget_year = int(row[col.get("Budget Year", 1)]) if row[col.get("Budget Year", 1)] else None
+                price    = float(row[col.get("Estimate Price", 11)]) if row[col.get("Estimate Price", 11)] else None
+            except Exception as e:
+                print(f"    metadata parse error: {e}")
+
+        if not est_name:
+            print(f"  ✗ {fname}: no metadata found")
             continue
 
-        estimate_name = raw.get("Estimate Name") or raw.get("Estimate Name ") or ""
-        estimate_num  = raw.get("Estimate Number") or raw.get("Estimate Number2") or ""
-        area_sf       = raw.get("Area") or 0
-        price         = raw.get("Estimate Price") or 0
-        margin        = raw.get("Margin") or 0
-        schedule      = raw.get("Schedule") or 0
-        cost_per_week = raw.get("Cost per Week") or 0
-        soft_cost     = raw.get("Soft Cost") or 0
-        province      = raw.get("Province") or ""
-        city          = raw.get("City/Town") or ""
-        quarter       = raw.get("Quarter") or ""
-        budget_year   = raw.get("Budget Year") or ""
-        contract_type = raw.get("Contract Type") or ""
-        payment_method= raw.get("Payment Method") or ""
-        price_cat     = raw.get("Price Category") or ""
-        result        = raw.get("Successful / Unsuccessful") or ""
-        status        = raw.get("Status") or ""
-        type_code     = raw.get("Type of Construction") or 0
+        project_type = infer_type(est_name, raw_type)
 
-        project_type = infer_project_type(estimate_name, type_code)
-        cost_per_sf  = round(float(price) / float(area_sf), 2) if area_sf and float(area_sf) > 0 else 0
+        # ── Read divisions from Estimate Summary ──────────────────────────────
+        divs = []
+        for row in wb["Estimate Summary"].iter_rows(values_only=True):
+            if not row[0]:
+                continue
+            code = normalize_code(str(row[0]))
+            if not re.match(r'^\d{2} 00 00$', code):
+                continue
+            if code not in DIVISION_CODES:
+                continue
 
-        project_record = {
-            "source_file":     fname,
-            "estimate_number": str(estimate_num),
-            "estimate_name":   str(estimate_name),
-            "project_type":    project_type,
-            "area_sf":         float(area_sf),
-            "province":        str(province),
-            "city":            str(city),
-            "quarter":         str(quarter),
-            "budget_year":     int(budget_year) if budget_year else None,
-            "contract_type":   str(contract_type),
-            "payment_method":  str(payment_method),
-            "estimate_price":  round(float(price), 2),
-            "price_category":  str(price_cat),
-            "cost_per_sf":     cost_per_sf,
-            "schedule_weeks":  int(schedule) if schedule else 0,
-            "cost_per_week":   round(float(cost_per_week), 2),
-            "soft_cost":       round(float(soft_cost), 2),
-            "margin":          round(float(margin), 4),
-            "margin_pct":      round(float(margin) * 100, 2),
-            "status":          str(status),
-            "result":          str(result),
-        }
+            try: total = float(row[7]) if row[7] else 0
+            except: total = 0
+            if total == 0:
+                continue  # skip zero — means scope not included
 
-        all_projects.append(project_record)
-        print(f"  ✓ Project: {estimate_name} | ${price:,.0f} | {area_sf:,.0f} SF | margin {float(margin)*100:.1f}%")
+            # Parse $/SF from col I (index 8)
+            cpf = 0
+            sf_raw = row[8] if len(row) > 8 else None
+            if sf_raw:
+                try: cpf = float(str(sf_raw).replace("$/SF", "").strip())
+                except: pass
+            if cpf == 0 and area_sf and area_sf > 0:
+                cpf = round(total / area_sf, 2)
 
-        # ── Estimate Summary sheet ───────────────────────────────────────
-        if "Estimate Summary" not in sheet_names:
-            print(f"  ✗ No Estimate Summary sheet.\n")
-            continue
+            def f(v):
+                try: return float(v) if v else 0
+                except: return 0
 
-        meta, divisions, totals = extract_estimate_summary(wb["Estimate Summary"])
-
-        # One division record per CSI division per project
-        for code, div in divisions.items():
-            if div["total"] == 0 and div["cost_per_sf"] == 0:
-                continue  # skip empty divisions
-
-            division_record = {
-                "estimate_number": str(estimate_num),
-                "estimate_name":   str(estimate_name),
+            divs.append({
+                "estimate_number": est_num,
+                "estimate_name":   est_name,
                 "project_type":    project_type,
-                "area_sf":         float(area_sf),
-                "province":        str(province),
-                "city":            str(city),
-                "budget_year":     int(budget_year) if budget_year else None,
+                "area_sf":         area_sf,
+                "province":        province,
+                "city":            city,
+                "budget_year":     budget_year,
                 "division_code":   code,
-                "division_name":   div["description"],
-                "total":           div["total"],
-                "cost_per_sf":     div["cost_per_sf"],
-                "me":              div["me"],
-                "labour":          div["labour"],
-                "subcontract":     div["subcontract"],
-                "pct_of_project":  round(div["total"] / float(price) * 100, 2) if price else 0,
-            }
-            all_divisions.append(division_record)
+                "division_name":   DIVISION_CODES[code],
+                "total":           round(total, 2),
+                "cost_per_sf":     round(cpf, 2),
+                "me":              round(f(row[3]), 2),
+                "labour":          round(f(row[5]), 2),
+                "subcontract":     round(f(row[6]), 2),
+                "pct_of_project":  round(total / price * 100, 2) if price and price > 0 else 0,
+            })
 
-        active_divs = sum(1 for d in divisions.values() if d["total"] > 0)
-        print(f"  ✓ Divisions: {active_divs} active CSI divisions extracted\n")
+        if divs:
+            all_divs.extend(divs)
+            processed += 1
+            print(f"  ✓ {est_name:<42} {len(divs):2d} divisions")
+        else:
+            print(f"  ✗ {fname}: no non-zero divisions found")
 
-    # ── Write output files ───────────────────────────────────────────────────
-    projects_path  = os.path.join(OUTPUT_DIR, "projects.json")
-    divisions_path = os.path.join(OUTPUT_DIR, "divisions.json")
+    print(f"\n  {processed} workbooks → {len(all_divs)} division records")
+    return all_divs
 
-    with open(projects_path, "w", encoding="utf-8") as f:
-        json.dump(all_projects, f, indent=2, ensure_ascii=False)
 
-    with open(divisions_path, "w", encoding="utf-8") as f:
-        json.dump(all_divisions, f, indent=2, ensure_ascii=False)
+# ══════════════════════════════════════════════════════════════════════════════
+# MAIN
+# ══════════════════════════════════════════════════════════════════════════════
 
-    # ── Summary ─────────────────────────────────────────────────────────────
-    print("=" * 60)
-    print(f"✅ Done!")
-    print(f"   Projects extracted : {len(all_projects)}")
-    print(f"   Division records   : {len(all_divisions)}")
-    print(f"   Output → {projects_path}")
-    print(f"   Output → {divisions_path}")
-    print("=" * 60)
+def main():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # Print quick project summary table
-    print("\nProject Summary:")
-    print(f"{'#':<3} {'Name':<40} {'Price':>12} {'SF':>8} {'Margin':>8}")
-    print("-" * 75)
-    for i, p in enumerate(all_projects, 1):
-        print(f"{i:<3} {p['estimate_name'][:39]:<40} ${p['estimate_price']:>11,.0f} {p['area_sf']:>8,.0f} {p['margin_pct']:>7.1f}%")
+    dashboard_path = os.path.join(EXCEL_DIR, DASHBOARD_FILENAME)
+    if not os.path.exists(dashboard_path):
+        print(f"⚠️  Dashboard not found: {dashboard_path}")
+        print(f"   Place '{DASHBOARD_FILENAME}' in: {os.path.abspath(EXCEL_DIR)}")
+        projects = []
+    else:
+        projects = read_dashboard(dashboard_path)
+
+    divisions = read_workbooks(EXCEL_DIR, DASHBOARD_FILENAME)
+
+    # Write output
+    with open(os.path.join(OUTPUT_DIR, "projects.json"), "w", encoding="utf-8") as f:
+        json.dump(projects, f, indent=2, ensure_ascii=False)
+    with open(os.path.join(OUTPUT_DIR, "divisions.json"), "w", encoding="utf-8") as f:
+        json.dump(divisions, f, indent=2, ensure_ascii=False)
+
+    # Summary
+    print("\n" + "="*60)
+    print(f"✅ projects.json  → {len(projects)} projects")
+    print(f"✅ divisions.json → {len(divisions)} division records")
+    print("="*60)
+
+    if projects:
+        type_counts = Counter(p["project_type"] for p in projects)
+        print("\nProject type breakdown:")
+        for t, n in sorted(type_counts.items(), key=lambda x: -x[1]):
+            print(f"  {t:<38} {n:>4}")
+
+        prov = Counter(p["province"] for p in projects if p["province"])
+        print(f"\nProvinces: {dict(prov)}")
+
+        years = [p["budget_year"] for p in projects if p["budget_year"]]
+        if years:
+            print(f"Year range: {min(years)} – {max(years)}")
+
+    if divisions:
+        workbooks = len(set(d["estimate_name"] for d in divisions))
+        print(f"\nDivision data from {workbooks} individual workbooks")
 
 
 if __name__ == "__main__":

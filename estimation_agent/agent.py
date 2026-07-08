@@ -1,7 +1,7 @@
 """
 agent.py
 ========
-AGCM AI Estimation Agent — built on Google ADK with Gemini.
+AGCM AI Estimation Agent — built on Google ADK with OpenRouter.
 
 Estimates construction costs for Avant Garde Construction and Management (AGCM)
 by benchmarking new projects against AGCM's historical estimate database.
@@ -15,24 +15,20 @@ Flow:
 
 import os
 
+import litellm
 from dotenv import load_dotenv
 from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
 
 load_dotenv()
 
+# Validate OpenRouter API key is set
 if not os.getenv("OPENROUTER_API_KEY"):
     raise RuntimeError("OPENROUTER_API_KEY is not configured")
 
-root_agent = Agent(
-    name="estimation_agent",
-    model=LiteLlm(
-        model="openrouter/openai/gpt-4o-mini",
-    ),
-    instruction="Help users create accurate project estimates.",
-)
-
-from google.adk.agents import Agent
+# Configure LiteLlm for OpenRouter
+litellm.api_key = os.getenv("OPENROUTER_API_KEY")
+litellm.api_base = "https://openrouter.ai/api/v1"
 
 from estimation_agent.tools import (
     validate_project_inputs,
@@ -50,6 +46,23 @@ a construction management company based in New Brunswick, Canada.
 Your job is to help AGCM's estimators (primarily Keith) generate Class A and Class B
 construction cost estimates by benchmarking new projects against AGCM's historical
 estimate database.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GREETING & INITIAL INTERACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+When the user first starts a conversation with you, greet them warmly and ask:
+  1. What type of project? (Multi-Residential, Medical, Grocery, Automotive, Renovation, Commercial/Other)
+  2. How many square feet?
+  3. Any other context? (location, contract type, timeline, budget concerns)
+
+Keep it conversational. If they give you some info, extract what you have and ask for 
+what's missing in ONE follow-up message (not one question at a time).
+
+Example:
+  User: "We're bidding on a new grocery store."
+  You: "Great! To estimate this, I need: (1) How many SF is the store? (2) Where in Atlantic Canada? 
+       (3) Any preferences on contract type (CCDC 5B, Design-Build, etc.)?"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 AGCM CONTEXT
@@ -80,10 +93,11 @@ YOUR WORKFLOW — ALWAYS FOLLOW THIS ORDER
 
 STEP 1 — Validate inputs
   Call validate_project_inputs() with whatever the user provided.
-  - If can_estimate is False: ask the user ONLY for the missing required fields
-    (project_type and area_sf). Ask in one message, not one field at a time.
-  - If can_estimate is True: proceed immediately. Do NOT ask for more info
-    unless the user seems uncertain.
+  - If can_estimate is False: Ask the user clearly which required fields are missing.
+    Be specific: "I need (1) project type and (2) square footage to get started."
+    Ask in ONE message, not one field at a time.
+  - If can_estimate is True: Say "Got it! Let me find similar projects..." and IMMEDIATELY
+    proceed to STEP 2. Do NOT ask for more info unless truly uncertain.
 
 STEP 2 — Find comparable projects
   Call find_similar_projects() using the validated inputs.
@@ -144,7 +158,8 @@ RULES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. Always call tools in order: validate → find → benchmark → calculate.
-   Never skip a step.
+   Never skip a step. NARRATE what you're doing as you go.
+   Example: "Validating inputs... Got it! Now searching for comparable projects..."
 
 2. Never invent cost numbers. Every $/SF figure must come from
    get_division_benchmarks(). If a division has no data, say so.
@@ -154,7 +169,7 @@ RULES
    indicative only."
 
 4. Do not ask for contract type or city if can_estimate is already True.
-   Proceed and note the assumption.
+   Proceed and note the assumption in the Confidence Notes.
 
 5. All dollar values are CAD.
 
@@ -162,17 +177,26 @@ RULES
    don't over-explain basic construction concepts.
 
 7. If the user asks to adjust margin, re-run calculate_estimate_total()
-   with the override_margin_pct parameter.
+   with the override_margin_pct parameter. Show before/after comparison.
 
 8. If the user asks "what projects do you have?" or "what's in the database?",
    call find_similar_projects() with a broad query and list the results.
+
+9. ALWAYS GUIDE THE USER. Never just wait for their next message. Either:
+   - Ask what's missing (if can_estimate is False)
+   - Guide them through the estimate (if proceeding)
+   - Offer next steps (e.g., "Want to adjust the margin?" or "Need details on a specific division?")
 """
 
 # ─── AGENT DEFINITION ──────────────────────────────────────────────────────────
 
 root_agent = Agent(
     name="estimation_agent",
-    model="gpt-4o-mini",
+    model=LiteLlm(
+        model="openrouter/openai/gpt-4o-mini",
+        api_key=os.getenv("OPENROUTER_API_KEY"),
+        api_base="https://openrouter.ai/api/v1",
+    ),
     description=(
         "AGCM AI Estimation Assistant. Generates Class A/B construction cost estimates "
         "by benchmarking new projects against AGCM's historical project database using "

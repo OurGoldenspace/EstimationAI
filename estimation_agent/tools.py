@@ -308,8 +308,12 @@ def find_similar_projects(
     Returns:
         dict with: matches (list), coverage_warning, avg_cost_per_sf
     """
+    # Filter to only projects that have division data
+    projects_with_divs = set(str(d["estimate_number"]) for d in _DIVISIONS)
+    projects_to_search = [p for p in _PROJECTS if str(p["estimate_number"]) in projects_with_divs]
+    
     scored = []
-    for p in _PROJECTS:
+    for p in projects_to_search:
         score = _similarity_score(p, project_type, area_sf, province, city)
         scored.append((score, p))
 
@@ -368,7 +372,7 @@ def find_similar_projects(
 
     return {
         "matches": matches,
-        "total_projects_in_database": len(_PROJECTS),
+        "total_projects_in_database": len(projects_to_search),
         "avg_cost_per_sf_weighted": round(avg_cost_per_sf, 2),
         "coverage_warning": coverage_warning,
         "query": {
@@ -419,13 +423,14 @@ def get_division_benchmarks(
     """
     # Determine which projects to pull division data from
     if comparable_estimate_numbers:
-        source_nums = set(comparable_estimate_numbers)
-        source_divs = [d for d in _DIVISIONS if d["estimate_number"] in source_nums]
+        # Normalize to strings to handle int/string mismatch
+        source_nums = set(str(x) for x in comparable_estimate_numbers)
+        source_divs = [d for d in _DIVISIONS if str(d["estimate_number"]) in source_nums]
     else:
         # Find top 3 similar projects
         result = find_similar_projects(project_type, area_sf, province, top_n=3)
-        source_nums = set(m["estimate_number"] for m in result["matches"])
-        source_divs = [d for d in _DIVISIONS if d["estimate_number"] in source_nums]
+        source_nums = set(str(m["estimate_number"]) for m in result["matches"])
+        source_divs = [d for d in _DIVISIONS if str(d["estimate_number"]) in source_nums]
 
     if not source_divs:
         return {
@@ -498,7 +503,7 @@ def get_division_benchmarks(
         "total_construction_cost":  total_construction_cost,
         "total_cost_per_sf":        round(total_cost_per_sf, 2),
         "area_sf":                  area_sf,
-        "source_projects":          list(source_nums),
+        "source_projects":          [str(x) for x in source_nums],
         "division_count":           len(benchmarks),
     }
 
